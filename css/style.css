@@ -36,13 +36,20 @@ body {
   --var-col-gray: #a3a3a2;
 }
 
-.d-flex {
+.d-flex-start {
   display: flex;
-  gap: 20px;
-  justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
+.d-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  
 .col {
   width: auto;
   flex-basis: auto;
@@ -50,11 +57,11 @@ body {
 }
 
 .col-4 {
-  width: calc(100 / 12 * 4);
+  width: calc(100% / 12 * 4);
 }
 
 .col-8 {
-  width: calc(100 / 12 * 8);
+  width: calc(100% / 12 * 8);
 }
 
 .col-12 {
@@ -95,6 +102,10 @@ body {
     }
   }
   
+.tiramisù-card{
+    margin-bottom: 50px auto;
+}
+
   .recipe-ingredients {
     background-color: var(--var-col-white);
     box-shadow: 0 0 8px var(--var-col-gray);
@@ -137,6 +148,24 @@ body {
   
     }
   }
+
+  .icons{
+    margin-bottom: 50px;
+  }
+
+  .banner{
+    padding: 30px 0;
+    display: none;
+  }
+
+  .presentation-title::after{
+    content: '';
+    display: block;
+    width: 150px;
+    height: 2px;
+    background: var(--var-col-yellow);
+    margin: 50px 0;
+  }
 }
 
 /* Tablet Mode */
@@ -144,18 +173,18 @@ body {
 @media screen and (min-width: 768px) {
 
 
-    .col {
+    .col-md {
         width: auto;
         flex-basis: auto;
         padding: 1rem;
       }
     
       .col-md-4 {
-        width: calc(100 / 12 * 4);
+        width: calc(100% / 12 * 4);
       }
     
       .col-md-8 {
-        width: calc(100 / 12 * 8);
+        width: calc(100% / 12 * 8);
       }
     
       .col-md-12 {
@@ -175,91 +204,9 @@ body {
   }
 
   .container {
-    p {
-      font-size: 1.5rem;
-      color: var(--var-col-gray);
-      padding-top: 10px;
-    }
-  
-    h3 {
-      font-size: 2rem;
-      color: var(--var-col-purple);
-      padding: 10px 0;
-      display: inline-block;
-    }
-  
-    .name-recipe>.mobile-d-none {
-      display: inline-block;
-    }
-  }
-  
-  .recipe-ingredients {
-    background-color: var(--var-col-white);
-    box-shadow: 0 0 8px var(--var-col-gray);
-    margin-bottom: 30px;
-  
-    .col-12 {
-      padding: 10px 20px;
-    }
-  }
-  
-  h5 {
-    font-size: 1.3rem;
-    margin: 0;
-    padding: 20px 0;
-  }
-  
-  .tiramisù-img {
-    margin: -5px 0;
-  }
-  
-  .d-flex {
-  
-      span{
-          background-color: var(--var-col-white);
-          margin: 20px auto;
-          padding: 10px 15px;
-          border-radius: 50%;
-      }
-  
-    li span>h6 {
-      display: none;
-  
-    }
-  }
-}
-
-
-/* Desktop Mode */
-
-@media screen and (min-width: 992px) {
-  header {
-    background-color: var(--var-col-white);
-
-    h1 {
-      color: var(--var-col-yellow);
-      font-family: "Nerko One", cursive;
-      font-size: 3rem;
-      text-shadow: 2px 2px 0 var(--var-col-gray);
-    }
-  }
-
-  .col {
-    width: auto;
-    flex-basis: auto;
-    padding: 1rem;
-  }
-
-  .col-lg-4 {
-    width: calc(100 / 12 * 4);
-  }
-
-  .col-lg-8 {
-    width: calc(100 / 12 * 8);
-  }
-
-  .col-lg-12 {
-    width: 100%;
+    width: 960px;
+    max-width: 85%;
+    margin: 0 auto;
   }
 
   .container {
@@ -296,6 +243,126 @@ body {
   
     .rest {
       padding-bottom: 20px;
+    }
+  }
+  
+  h5 {
+    font-size: 1.3rem;
+    margin: 0;
+    padding: 20px 0;
+  }
+  
+  .tiramisù-img {
+    margin: -5px 0;
+  }
+  
+  .d-flex {
+  
+      span{
+          background-color: var(--var-col-white);
+          margin: 20px auto;
+          padding: 10px 15px;
+          border-radius: 50%;
+      }
+  
+    li span>h6 {
+      display: none;
+  
+    }
+  }
+
+  .banner{
+    padding: 30px 0;
+    display: block;
+  }
+
+  .presentation-title::after{
+    content: '';
+    display: block;
+    width: 150px;
+    height: 2px;
+    background: var(--var-col-yellow);
+    margin: 50px 0;
+  }
+
+  .float-img{
+    float: left;
+  }
+}
+
+
+/* Desktop Mode */
+
+@media screen and (min-width: 992px) {
+  header {
+    background-color: var(--var-col-white);
+
+    h1 {
+      color: var(--var-col-yellow);
+      font-family: "Nerko One", cursive;
+      font-size: 3rem;
+      text-shadow: 2px 2px 0 var(--var-col-gray);
+    }
+  }
+
+  .col-lg {
+    width: auto;
+    flex-basis: auto;
+    padding: 1rem;
+  }
+
+  .col-lg-4 {
+    width: calc(100% / 12 * 4);
+  }
+
+  .col-lg-8 {
+    width: calc(100% / 12 * 8);
+  }
+
+  .col-lg-12 {
+    width: 100%;
+  }
+
+  .container {
+    width: 1200px;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  .container {
+    p {
+      font-size: 1.5rem;
+      color: var(--var-col-gray);
+      padding-top: 10px;
+    }
+  
+    h3 {
+      font-size: 2rem;
+      color: var(--var-col-purple);
+      padding: 10px 0;
+      display: inline-block;
+    }
+  
+    .name-recipe>.mobile-d-none {
+      display: inline-block;
+    }
+  }
+  
+  .recipe-ingredients {
+    background-color: var(--var-col-white);
+    box-shadow: 0 0 8px var(--var-col-gray);
+    margin-top: 25px;
+    padding: 25px;
+  
+    h5 {
+      padding: 20px 40px 5px;
+    }
+  
+    .col-12 {
+      padding: 10px 20px;
+    }
+  
+    .rest {
+      padding-bottom: 25px;
     }
   }
   
@@ -327,4 +394,17 @@ body {
     }
   }
 
+  .banner{
+    padding: 30px 0;
+    display: block;
+  }
+
+  .presentation-title::after{
+    content: '';
+    display: block;
+    width: 150px;
+    height: 2px;
+    background: var(--var-col-yellow);
+    margin: 50px 0;
+  }
 }
