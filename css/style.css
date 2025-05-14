@@ -6,8 +6,68 @@ padding: 0;
 box-sizing: border-box;
 }
 
+/* General */
+
+body{
+    background-color: var(--var-col-lightgray);
+}
 /* Mobile First */
 
+:root{
+    --var-col-white: #fff;
+    --var-col-purple: #7c69a4;
+    --var-col-lightgray: #f6f5f3;
+    --var-col-yellow: #ff9614;
+}
+
+/* Utilities */
+@media screen and (max-width: 767px){
+
+    
+    header{
+        background-color: var(--var-col-white);
+        
+        h1{
+            color: var(--var-col-yellow);
+            font-family: "Nerko One", cursive;
+            font-size: 3rem;
+            margin: 0 auto;
+            text-align: center;
+            padding: 20px;
+        }
+    }
+}
 /* Tablet Mode */
 
+@media screen and (min-width: 768px){
+
+    
+    header{
+        background-color: var(--var-col-white);
+        
+        h1{
+            color: var(--var-col-yellow);
+            font-family: "Nerko One", cursive;
+            font-size: 3rem;
+            margin: 0;
+            font-style: italic;
+        }
+    }
+}
+
 /* Desktop Mode */
+
+@media screen and (min-width: 992px){
+
+    
+    header{
+        background-color: var(--var-col-white);
+        
+        h1{
+            color: var(--var-col-yellow);
+            font-family: "Nerko One", cursive;
+            font-size: 3rem;
+            margin: 0;;
+        }
+    }
+}
