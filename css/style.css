@@ -140,7 +140,7 @@ body {
           background-color: var(--var-col-white);
           margin: 20px auto;
           padding: 10px 15px;
-          border-radius: 50%;
+          border-radius: 25%;
       }
   
     li span>h6 {
@@ -266,8 +266,8 @@ body {
       span{
           background-color: var(--var-col-white);
           margin: 20px auto;
-          padding: 10px 15px;
-          border-radius: 50%;
+          padding: 10px 30px;
+          border-radius: 30%;
       }
   
     li span>h6 {
