@@ -210,7 +210,7 @@ body {
   }
 
   .container {
-    p {
+     .recipe p {
       font-size: 1.5rem;
       color: var(--var-col-gray);
       padding-top: 10px;
@@ -287,6 +287,11 @@ body {
 
   .float-img{
     float: left;
+    width: 300px;
+  }
+
+  p{
+    font-size: 0.8rem;
   }
 }
 
